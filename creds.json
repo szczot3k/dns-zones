@@ -3,5 +3,8 @@
       "app-key": "$OVH_APP_KEY",
       "app-secret-key": "$OVH_APP_SECRET",
       "consumer-key": "$OVH_CONSUMER_KEY"
+  },
+  "cloudflare": {
+    "apitoken": "$CLOUDFLARE_API_TOKEN"
   }
 }
