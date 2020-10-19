@@ -1,0 +1,19 @@
+name: Preview DNS zone
+
+on: pull_request
+
+jobs:
+  dnscontrol:
+    name: DNSControl
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Preview DNS zone
+        uses: koenrh/dnscontrol-action@v3
+        env:
+          OVH_APP_KEY: ${{ secrets.OVH_APP_KEY }}
+          OVH_APP_SECRET: ${{ secrets.OVH_APP_SECRET }}
+          OVH_CONSUMER_KEY: ${{ secrets.OVH_CONSUMER_KEY }}
+        with:
+          args: preview
