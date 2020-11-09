@@ -8,7 +8,7 @@ var CF_PROXY_ON = {'cloudflare_proxy': 'on'};
 
 var REG_OVH = NewRegistrar("ovh", "OVH");
 var OVH = NewDnsProvider("ovh", "OVH");
-var CLOUDFLARE = NewDnsProvider('cloudflare','CLOUDFLAREAPI')
+var CLOUDFLARE = NewDnsProvider('cloudflare','CLOUDFLAREAPI');
 
 // Domains:
 
