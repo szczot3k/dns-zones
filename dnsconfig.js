@@ -12,7 +12,7 @@ var CLOUDFLARE = NewDnsProvider('cloudflare','CLOUDFLAREAPI');
 
 // Domains:
 
-D('szczot3k.pl', REG_OVH, DnsProvider(OVH),
+D('szczot3k.pl', REG_OVH, DnsProvider(CLOUDFLARE),
     A('@', '51.68.142.236'),
     MX('@', 1, 'mx0.mail.ovh.net.'),
     MX('@', 5, 'mx1.mail.ovh.net.'),
