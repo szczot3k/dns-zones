@@ -29,5 +29,7 @@ D('szczot3k.pl', REG_OVH, DnsProvider(CLOUDFLARE),
 
 D('kszczot.ovh', REG_OVH, DnsProvider(CLOUDFLARE),
     ALIAS('@', 'szczot3k.github.io.', CF_PROXY_ON),
-    CNAME('www', 'szczot3k.github.io.', CF_PROXY_ON)
+    CNAME('www', 'szczot3k.github.io.', CF_PROXY_ON),
+    MX('@', 10, 'mx.mikr.us.'),
+    TXT('@', 'v=spf1 include:spf.mikr.us -all')
 );
