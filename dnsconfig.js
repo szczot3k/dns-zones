@@ -7,7 +7,6 @@ var CF_PROXY_ON = {'cloudflare_proxy': 'on'};
 // Providers:
 
 var REG_OVH = NewRegistrar("ovh", "OVH");
-var OVH = NewDnsProvider("ovh", "OVH"); // NOT USED at the moment
 var CLOUDFLARE = NewDnsProvider('cloudflare','CLOUDFLAREAPI');
 
 // Domains:
@@ -20,9 +19,7 @@ D('szczot3k.pl', REG_OVH, DnsProvider(CLOUDFLARE),
     MX('@', 100, 'mx3.mail.ovh.net.'),
     A('www', '51.68.142.236'),
     A('sv01.cloud', '51.68.142.236'),
-    // A('gcp01.cloud', '35.231.50.169'),
     A('traefik', '51.68.142.236'),
-    // A('vps', '51.68.142.236'),
     SRV('_autodiscover._tcp', 0, 0, 443, 'pro1.mail.ovh.net.'),
     CNAME('autoconfig', 'autodiscover.mail.ovh.net.')
 );
@@ -32,6 +29,9 @@ D('kszczot.ovh', REG_OVH, DnsProvider(CLOUDFLARE),
     CNAME('www', 'szczot3k.github.io.', CF_PROXY_ON),
     A('nextcloud', '5.135.153.44'),
     AAAA('nextcloud', '2001:41d0:8:d32c::1'),
+    A('sv1', '51.68.142.236'),
+    A('sv2', '5.135.153.44'),
+    AAAA('sv2', '2001:41d0:8:d32c::1'),
     MX('@', 10, 'mx.mikr.us.'),
     TXT('@', 'v=spf1 include:spf.mikr.us -all')
 );
