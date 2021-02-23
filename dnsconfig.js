@@ -35,3 +35,10 @@ D('kszczot.ovh', REG_OVH, DnsProvider(CLOUDFLARE),
     MX('@', 10, 'mx.mikr.us.'),
     TXT('@', 'v=spf1 include:spf.mikr.us -all')
 );
+
+D('threelip.ovh', REG_OVH, DnsProvider(CLOUDFLARE),
+    A('@', '5.135.153.44', CF_PROXY_ON),
+    AAAA('@', '2001:41d0:8:d32c::1', CF_PROXY_ON),
+    MX('@', 10, 'mx.mikr.us.'),
+    TXT('@', 'v=spf1 include:spf.mikr.us -all')
+);
