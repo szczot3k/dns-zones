@@ -32,6 +32,7 @@ D('kszczot.ovh', REG_OVH, DnsProvider(CLOUDFLARE),
     A('sv1', '51.68.142.236'),
     A('sv2', '5.135.153.44'),
     CNAME('dn42-lg', 'sv2'),
+    A('fr01.dn42', '51.68.142.236'),
     AAAA('sv2', '2001:41d0:8:d32c::1'),
     MX('@', 10, 'mx.mikr.us.'),
     TXT('@', 'v=spf1 include:spf.mikr.us -all')
